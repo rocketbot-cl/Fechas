@@ -26,58 +26,42 @@ Para instalar librerias se debe ingresar por terminal a la carpeta "libs"
 
 import os
 import datetime
+import locale
 
 """
     Obtengo el modulo que fueron invocados
 """
 
-
+locale.setlocale(locale.LC_ALL, 'en_US')
 module = GetParams("module")
 
 if module == "dateFormat":
     date = GetParams("date")
-    format = GetParams("format")
-    type = GetParams("type")
+    input_ = GetParams("in")
+    output = GetParams("out")
     result = GetParams("result")
 
-    separators = ["-", "-", "."]
-
-    for sep_date in separators:
-        if sep_date in date:
-            sep = sep_date
-
     try:
-        if format == "word":
-            date = date.split(sep)
-            month = datetime.date(int(date[2]), int(date[1]), int(date[0])).strftime('%B')
-            date = "{} de {} del {}".format(date[0], month, date[2])
+        if "%d de %B del %Y" in [output, input_]:
+            locale.setlocale(locale.LC_ALL, '')
+            datetime_format = datetime.datetime.strptime(date, input_)
+            date = datetime_format.strftime(output)
+            
         else:
-            date = date.replace(sep, format)
-
-        if type == "american":
-            if format != "word":
-                date = date.split(format)
-                day = date[0]
-                date[0] = date[1]
-                date[1] = day
-                date = format.join(date)
-
-        elif type == "invert":
-            if format != "word":
-                date = date.split(format)
-                date.reverse()
-                date = format.join(date)
+            datetime_format = datetime.datetime.strptime(date, input_)
+            date = datetime_format.strftime(output)
 
         if result:
             SetVar(result, date)
+    
+    except ValueError:
+        PrintException()
+        raise Exception("The selected format does not match with your date")
 
     except Exception as e:
         PrintException()
         raise e
 
-
-
-
-
+    
 
 

@@ -51,49 +51,85 @@
             "options": [
               {
                 "title": "dd/mm/yyyy",
-                "value": "/"
+                "value": "%d/%m/%Y"
+              },
+              {
+                "title": "yyyy/mm/dd",
+                "value": "%Y/%m/%d"
               },
               {
                 "title": "dd-mm-yyyy",
-                "value": "-"
+                "value": "%d-%m-%Y"
+              },
+              {
+                "title": "yyyy-mm-dd",
+                "value": "%d-%m-%Y"
               },
               {
                 "title": "dd.mm.yyyy",
-                "value": "."
+                "value": "%d.%m.%Y"
               },
               {
-                "title": "dd de mm del yyyy",
-                "value": "word"
+                "title": "yyyy.mm.dd",
+                "value": "%Y.%m.%d"
+              },
+              {
+                "title": "dd de mm del yyyy (Spanish)",
+                "value": "%d de %B del %Y"
+              },
+              {
+                "title": "dd Month  yyyy (English)",
+                "value": "%d %B %Y"
               }
             ],
             "title": {
-              "es": "Seleccione formato",
-              "en": "Select format"
+              "es": "Formato de entrada",
+              "en": "Input format"
             },
-            "id": "format",
+            "id": "in",
             "css": "col-md-6"
           },
           {
             "type": "select",
             "options": [
               {
-                "title": "Default (dd/mm/yyyy)",
-                "value": "american"
+                "title": "dd/mm/yyyy",
+                "value": "%d/%m/%Y"
               },
               {
-                "title": "Americano (mm/dd/yyyy)",
-                "value": "american"
+                "title": "yyyy/mm/dd",
+                "value": "%Y/%m/%d"
               },
               {
-                "title": "Invertido (yyyy/mm/dd)",
-                "value": "invert"
+                "title": "dd-mm-yyyy",
+                "value": "%d-%m-%Y"
+              },
+              {
+                "title": "yyyy-mm-dd",
+                "value": "%d-%m-%Y"
+              },
+              {
+                "title": "dd.mm.yyyy",
+                "value": "%d.%m.%Y"
+              },
+              {
+                "title": "yyyy.mm.dd",
+                "value": "%Y.%m.%d"
+              },
+              {
+                "title": "dd de mm del yyyy (Spanish)",
+                "value": "%d de %B del %Y"
+              },
+              {
+                "title": "dd Month  yyyy (English)",
+                "value": "%d %B %Y"
               }
             ],
             "title": {
-              "es": "Tipo: ",
-              "en": "Type: "
+              "es": "Formato de salida: ",
+              "en": "Output format: "
             },
-            "id": "type",
+            "id": "out",
             "css": "col-md-6"
           },
           {
