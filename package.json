@@ -4,7 +4,7 @@
   "disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
   "version": "0.1",
   "license": "MIT",
-  "homepage": "http://rocketbot.co/",
+  "homepage": "http://rockertbot.cl",
   "linux": false,
   "windows": true,
   "mac": false,
@@ -49,10 +49,6 @@
           {
             "type": "select",
             "options": [
-               {
-                "title": "--Seleccione--",
-                "value": ""
-              },
               {
                 "title": "dd/mm/yyyy",
                 "value": "%d/%m/%Y"
@@ -78,12 +74,16 @@
                 "value": "%Y.%m.%d"
               },
               {
-                "title": "dd de mm del yyyy (Spanish)",
+                "title": "dd de mes del yyyy (Spanish)",
                 "value": "%d de %B del %Y"
               },
               {
                 "title": "dd Month  yyyy (English)",
                 "value": "%d %B %Y"
+              },
+              {
+                "title": "dd mon  yyyy (Abbreviated)",
+                "value": "%d %b %Y"
               }
             ],
             "title": {
@@ -96,10 +96,6 @@
           {
             "type": "select",
             "options": [
-               {
-                "title": "--Seleccione--",
-                "value": ""
-              },
               {
                 "title": "dd/mm/yyyy",
                 "value": "%d/%m/%Y"
@@ -131,6 +127,10 @@
               {
                 "title": "dd Month  yyyy (English)",
                 "value": "%d %B %Y"
+              },
+              {
+                "title": "dd mon  yyyy (Abbreviated)",
+                "value": "%d %b %Y"
               }
             ],
             "title": {
@@ -143,19 +143,15 @@
           {
             "type": "input",
             "placeholder": {
-              "es": "Variable",
-              "en": "Variable"
+              "es": "{fecha}",
+              "en": "{date}"
             },
             "title": {
-              "es": "Asignar resultado a variable: ",
-              "en": "Assign result to variable: "
-            },
-            "help": {
-              "es": "Nombre de variable sin llaves {}",
-              "en": "Variable name without {}"
+              "es": "Rsultado: ",
+              "en": "Result: "
             },
             "id": "result",
-            "css": "col-md-12"
+            "css": "col-md-6"
           }
 
         ]
