@@ -63,7 +63,7 @@
               },
               {
                 "title": "yyyy-mm-dd",
-                "value": "%d-%m-%Y"
+                "value": "%Y-%m-%d"
               },
               {
                 "title": "dd.mm.yyyy",
