@@ -147,8 +147,12 @@
               "en": "{date}"
             },
             "title": {
-              "es": "Rsultado: ",
+              "es": "Resultado: ",
               "en": "Result: "
+            },
+            "help": {
+              "es": "Nombre de variable sin llaves {}",
+              "en": "Variable name without {}"
             },
             "id": "result",
             "css": "col-md-6"
