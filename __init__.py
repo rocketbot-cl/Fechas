@@ -48,8 +48,11 @@ if module == "dateFormat":
             date = datetime_format.strftime(output)
             
         else:
+            print('aaa',input_)
             datetime_format = datetime.datetime.strptime(date, input_)
+            print(date)
             date = datetime_format.strftime(output)
+
 
         if result:
             SetVar(result, date)
