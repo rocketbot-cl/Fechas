@@ -79,5 +79,27 @@ if module == "dateFormat":
         raise e
 
     
+if module == "weekDay":
+    date = GetParams("date")
+    input_ = GetParams("in")
+    result = GetParams("result")
+    try:
+        if "%d de %B del %Y" in [input_]:
+            locale.setlocale(locale.LC_ALL, '')
+            datetime_format = datetime.datetime.strptime(date, input_)
+        else:
+            try:
+                locale.setlocale(locale.LC_ALL, 'en_US')
+            except locale.Error:
+                pass
+            if not input_:
+                input_ = custom_in
+            datetime_format = datetime.datetime.strptime(date, input_)
+            weekday_date = datetime_format.weekday()
+        SetVar(result, weekday_date)
+
+    except Exception as e:
+        PrintException()
+        raise e
 
 
