@@ -102,4 +102,34 @@ if module == "weekDay":
         PrintException()
         raise e
 
+if module == "calculateDate":
+    date = GetParams("date")
+    input_ = GetParams("in")
+    result = GetParams("result")
+    type_of_date = GetParams("type_of_date")
+    type_operation = GetParams("type_operation")
+    amount = GetParams("amount")
+    try:
+        from datetime import timedelta
+        from dateutil import relativedelta
+        import dateutil
+        import dateutil.relativedelta
 
+
+        if "%d de %B del %Y" in [input_]:
+            locale.setlocale(locale.LC_ALL, '')
+            datetime_format = datetime.datetime.strptime(date, input_)
+        else:
+            try:
+                locale.setlocale(locale.LC_ALL, 'en_US')
+            except locale.Error:
+                pass
+            if not input_:
+                input_ = custom_in
+            datetime_format = datetime.datetime.strptime(date, input_)
+            args = {type_of_date: int(amount)}
+            final_date = datetime_format + relativedelta.relativedelta(**args)
+            SetVar(result, final_date)
+    except Exception as e:
+        PrintException()
+        raise e

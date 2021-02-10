@@ -5,6 +5,8 @@ Module that changes date format
 
 ## Updates
 
+### 10-2-2021
+- Add and subtract dates.
 ### 3-2-2021
 - Weekday: You can get the weekday of a date.
 
