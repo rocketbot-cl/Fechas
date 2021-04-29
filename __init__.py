@@ -34,19 +34,16 @@ import locale
 
 module = GetParams("module")
 
-if module == "now":
-    date = GetParams("date")
-    out = GetParams("out")
+try:      
 
-if module == "dateFormat":
-    date = GetParams("date")
-    input_ = GetParams("in")
-    output = GetParams("out")
-    custom_out = GetParams("custom_out")
-    custom_in = GetParams("custom_in")
-    result = GetParams("result")
+    if module == "dateFormat":
+        date = GetParams("date")
+        input_ = GetParams("in")
+        output = GetParams("out")
+        custom_out = GetParams("custom_out")
+        custom_in = GetParams("custom_in")
+        result = GetParams("result")
 
-    try:
         if "%d de %B del %Y" in [output, input_]:
             locale.setlocale(locale.LC_ALL, '')
             datetime_format = datetime.datetime.strptime(date, input_)
@@ -63,27 +60,21 @@ if module == "dateFormat":
             if not output:
                 output = custom_out
 
-            datetime_format = datetime.datetime.strptime(date, input_)
+            datetime_format = datetime.datetime.now()
+            if date not in ["today", "hoy", "now", "ahora"]:
+                datetime_format = datetime.datetime.strptime(date, input_)
             print(date)
             date = datetime_format.strftime(output)
 
         if result:
             SetVar(result, date)
-    
-    except ValueError:
-        PrintException()
-        raise Exception("The selected format does not match with your date")
-
-    except Exception as e:
-        PrintException()
-        raise e
 
     
-if module == "weekDay":
-    date = GetParams("date")
-    input_ = GetParams("in")
-    result = GetParams("result")
-    try:
+    if module == "weekDay":
+        date = GetParams("date")
+        input_ = GetParams("in")
+        result = GetParams("result")
+
         if "%d de %B del %Y" in [input_]:
             locale.setlocale(locale.LC_ALL, '')
             datetime_format = datetime.datetime.strptime(date, input_)
@@ -98,18 +89,15 @@ if module == "weekDay":
             weekday_date = datetime_format.weekday()
         SetVar(result, weekday_date)
 
-    except Exception as e:
-        PrintException()
-        raise e
 
-if module == "calculateDate":
-    date = GetParams("date")
-    input_ = GetParams("in")
-    result = GetParams("result")
-    type_of_date = GetParams("type_of_date")
-    type_operation = GetParams("type_operation")
-    amount = GetParams("amount")
-    try:
+    if module == "calculateDate":
+        date = GetParams("date")
+        input_ = GetParams("in")
+        result = GetParams("result")
+        type_of_date = GetParams("type_of_date")
+        type_operation = GetParams("type_operation")
+        amount = GetParams("amount")
+        
         from datetime import timedelta
         from dateutil import relativedelta
         import dateutil
@@ -130,6 +118,7 @@ if module == "calculateDate":
             args = {type_of_date: int(amount)}
             final_date = datetime_format + relativedelta.relativedelta(**args)
             SetVar(result, final_date)
-    except Exception as e:
-        PrintException()
-        raise e
+
+except Exception as e:
+    PrintException()
+    raise e
