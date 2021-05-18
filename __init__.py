@@ -120,7 +120,7 @@ try:
                 datetime_format = datetime.datetime.strptime(date, input_)
             args = {type_of_date: int(amount)}
             final_date = datetime_format + relativedelta.relativedelta(**args)
-            SetVar(result, final_date)
+            SetVar(result, final_date.strftime(input_))
 
 except Exception as e:
     PrintException()
