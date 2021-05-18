@@ -114,7 +114,10 @@ try:
                 pass
             if not input_:
                 input_ = custom_in
-            datetime_format = datetime.datetime.strptime(date, input_)
+
+            datetime_format = datetime.datetime.now()
+            if date not in ["today", "hoy", "now", "ahora"]:
+                datetime_format = datetime.datetime.strptime(date, input_)
             args = {type_of_date: int(amount)}
             final_date = datetime_format + relativedelta.relativedelta(**args)
             SetVar(result, final_date)
