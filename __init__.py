@@ -28,13 +28,22 @@ import os
 import datetime
 import locale
 
+base_path = tmp_global_obj["basepath"]
+cur_path = base_path + 'modules' + os.sep + 'Fechas' + os.sep + 'libs' + os.sep
+if cur_path not in sys.path:
+    sys.path.append(cur_path)
+
+from dateController import DateController
+
 """
     Obtengo el modulo que fueron invocados
 """
 
+global myDateObject
+
 module = GetParams("module")
 
-try:      
+try:
 
     if module == "dateFormat":
         date = GetParams("date")
@@ -50,24 +59,33 @@ try:
             date = datetime_format.strftime(output)
 
         else:
-            try:
-                locale.setlocale(locale.LC_ALL, 'en_US')
-            except locale.Error:
-                pass
+            # try:
+            #     locale.setlocale(locale.LC_ALL, 'en_US')
+            # except locale.Error:
+            #     pass
 
             if not input_:
                 input_ = custom_in
             if not output:
                 output = custom_out
+            
+            if date in ["today", "hoy", "now", "ahora"]:
+                date = datetime.datetime.now().__str__()[:10]
+                input_ = "%Y-%m-%d"
+            
+            myDateObject = DateController(date, input_)
+            date = myDateObject.changeFormat(output)
+            
 
-            datetime_format = datetime.datetime.now()
-            if date not in ["today", "hoy", "now", "ahora"]:
-                datetime_format = datetime.datetime.strptime(date, input_)
-            print(date)
-            date = datetime_format.strftime(output)
 
-        if result:
-            SetVar(result, date)
+            # datetime_format = datetime.datetime.now()
+            # if date not in ["today", "hoy", "now", "ahora"]:
+            #     datetime_format = datetime.datetime.strptime(date, input_)
+            # print(date)
+            # date = datetime_format.strftime(output)
+
+
+        SetVar(result, date)
 
     
     if module == "weekDay":
@@ -79,14 +97,16 @@ try:
             locale.setlocale(locale.LC_ALL, '')
             datetime_format = datetime.datetime.strptime(date, input_)
         else:
-            try:
-                locale.setlocale(locale.LC_ALL, 'en_US')
-            except locale.Error:
-                pass
+            # try:
+            #     locale.setlocale(locale.LC_ALL, 'en_US')
+            # except locale.Error:
+            #     pass
             if not input_:
                 input_ = custom_in
-            datetime_format = datetime.datetime.strptime(date, input_)
-            weekday_date = datetime_format.weekday()
+            myDateObject = DateController(date, input_)
+            weekday_date = myDateObject.getWeekDay()
+            # datetime_format = datetime.datetime.strptime(date, input_)
+            # weekday_date = datetime_format.weekday()
         SetVar(result, weekday_date)
 
 
@@ -121,6 +141,64 @@ try:
             args = {type_of_date: int(amount)}
             final_date = datetime_format + relativedelta.relativedelta(**args)
             SetVar(result, final_date.strftime(input_))
+
+    if module == "weekNumber":
+        date = GetParams("date")
+        print("first Date")
+        print(date)
+        input_ = GetParams("in")
+        result = GetParams("result")
+
+        if "%d de %B del %Y" in [input_]:
+            locale.setlocale(locale.LC_ALL, '')
+            datetime_format = datetime.datetime.strptime(date, input_)
+        else:
+            if date == None:
+                date = datetime.datetime.today()
+                weekNumber = date.strftime("%W")
+                SetVar(result, weekNumber)
+            else:
+                # try:
+                #     locale.setlocale(locale.LC_ALL, 'en_US')
+                # except locale.Error:
+                #     pass
+                # if not input_:
+                #     input_ = custom_in
+                if date in ["today", "hoy", "now", "ahora"]:
+                    date = datetime.datetime.now().__str__()[:10]
+                    input_ = "%Y-%m-%d"
+                myDateObject = DateController(date, input_)
+                weekday_number = myDateObject.getWeekNumber()
+                # datetime_format = datetime.datetime.strptime(date, input_)
+                # weekday_number = datetime_format.strftime("%W")
+                SetVar(result, weekday_number)
+
+    if module == "compareDates":
+
+        date = GetParams("date")
+        date2 = GetParams("date2")
+        input_ = GetParams("in")
+        custom_in = GetParams("custom_in")
+        operation = GetParams("operation")
+
+
+        if not input_:
+            input_ = custom_in
+        
+        if date in ["today", "hoy", "now", "ahora"]:
+            date = datetime.datetime.now().__str__()[:10]
+            input_ = "%Y-%m-%d"
+        
+        myDateObject = DateController(date, input_)
+
+        if date2 in ["today", "hoy", "now", "ahora"]:
+            date2 = datetime.datetime.now().__str__()[:10]
+            input_ = "%Y-%m-%d"
+
+        resultComparation = myDateObject.compareDate(date2, input_, operation)
+        result = GetParams("result")
+        SetVar(result, resultComparation)
+
 
 except Exception as e:
     PrintException()
