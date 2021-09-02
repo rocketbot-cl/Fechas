@@ -64,6 +64,7 @@
               "es": "Nombre de variable sin llaves {}",
               "en": "Variable name without {}"
             },
+            "remove_vars" : true,
             "id": "result",
             "css": "col-md-6"
           },
@@ -292,6 +293,7 @@
               "es": "Nombre de variable sin llaves {}",
               "en": "Variable name without {}"
             },
+            "remove_vars" : true,
             "id": "result",
             "css": "col-md-6"
           }
@@ -400,6 +402,7 @@
               "es": "Nombre de variable sin llaves {}",
               "en": "Variable name without {}"
             },
+            "remove_vars" : true,
             "id": "result",
             "css": "col-md-6"
           },
@@ -552,6 +555,7 @@
                 "es": "Nombre de variable sin llaves {}",
                 "en": "Variable name without {}"
               },
+              "remove_vars" : true,
               "id": "result",
               "css": "col-md-6"
             }
@@ -669,6 +673,7 @@
                   "es": "Nombre de variable sin llaves {}",
                   "en": "Variable name without {}"
                 },
+                "remove_vars" : true,
                 "id": "result",
                 "css": "col-md-6"
             },
