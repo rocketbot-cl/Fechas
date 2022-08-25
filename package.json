@@ -2,7 +2,7 @@
   "author": "Danilo Toro - Rocketbot - <danilo.toro@rocketbot.cl>",
   "description": "Módulo para el manejo de fechas",
   "disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
-  "version": "2.4",
+  "version": "2.4.1",
   "license": "MIT",
   "homepage": "http://rocketbot.co",
   "linux": false,
@@ -10,10 +10,13 @@
   "mac": false,
   "docker": false,
   "name": "Fechas",
-  "dependencies": {},
+  "dependencies": {
+    "dateutil": "2.8.1"
+  },
   "title": {
     "en": "Date",
-    "es": "Fechas"
+    "es": "Fechas",
+    "pr": "Data"
   },
   "icon": "data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik00NTIsNDBoLTI0VjBoLTQwdjQwSDEyNFYwSDg0djQwSDYwQzI2LjkxNiw0MCwwLDY2LjkxNiwwLDEwMHYzNTJjMCwzMy4wODQsMjYuOTE2LDYwLDYwLDYwaDM5MiAgICBjMzMuMDg0LDAsNjAtMjYuOTE2LDYwLTYwVjEwMEM1MTIsNjYuOTE2LDQ4NS4wODQsNDAsNDUyLDQweiBNNDcyLDQ1MmMwLDExLjAyOC04Ljk3MiwyMC0yMCwyMEg2MGMtMTEuMDI4LDAtMjAtOC45NzItMjAtMjBWMTg4ICAgIGg0MzJWNDUyeiBNNDcyLDE0OEg0MHYtNDhjMC0xMS4wMjgsOC45NzItMjAsMjAtMjBoMjR2NDBoNDBWODBoMjY0djQwaDQwVjgwaDI0YzExLjAyOCwwLDIwLDguOTcyLDIwLDIwVjE0OHoiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxyZWN0IHg9Ijc2IiB5PSIyMzAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0iIzAwMDAwMCIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHJlY3QgeD0iMTU2IiB5PSIyMzAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0iIzAwMDAwMCIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHJlY3QgeD0iMjM2IiB5PSIyMzAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0iIzAwMDAwMCIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHJlY3QgeD0iMzE2IiB5PSIyMzAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0iIzAwMDAwMCIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHJlY3QgeD0iMzk2IiB5PSIyMzAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0iIzAwMDAwMCIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHJlY3QgeD0iNzYiIHk9IjMxMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cmVjdCB4PSIxNTYiIHk9IjMxMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cmVjdCB4PSIyMzYiIHk9IjMxMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cmVjdCB4PSIzMTYiIHk9IjMxMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cmVjdCB4PSI3NiIgeT0iMzkwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxyZWN0IHg9IjE1NiIgeT0iMzkwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxyZWN0IHg9IjIzNiIgeT0iMzkwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxyZWN0IHg9IjMxNiIgeT0iMzkwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxyZWN0IHg9IjM5NiIgeT0iMzEwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K",
   "children": [
@@ -30,6 +33,12 @@
         "title_options": null,
         "options": null
       },
+      "pr": {
+        "title": "Formato de data",
+        "description": "Alterar o formato de uma data",
+        "title_options": null,
+        "options": null
+      },
       "form": {
         "css": "modal-lg",
         "inputs": [
@@ -37,15 +46,23 @@
             "type": "input",
             "placeholder": {
               "es": "19/10/2000",
-              "en": "19/10/2000"
+              "en": "19/10/2000",
+              "pr": "19/10/2000"
             },
             "title": {
               "es": "Fecha: ",
-              "en": "Date: "
+              "en": "Date: ",
+              "pr": "Data: "
+            },
+            "description": {
+              "es": "Fecha a la cual se le cambiará el formato",
+              "en": "Date to which the format will be changed",
+              "pr": "Data para a qual o formato será alterado"
             },
             "help": {
               "es": "Para usar la fecha actual, debes escribir 'hoy'",
-              "en": "For actual date, write 'today'"
+              "en": "For actual date, write 'today'",
+              "pr": "Para data atual, escreva 'today'"
             },
             "id": "date",
             "css": "col-md-6"
@@ -53,16 +70,24 @@
           {
             "type": "input",
             "placeholder": {
-              "es": "{fecha}",
-              "en": "{date}"
+              "es": "fecha",
+              "en": "date",
+              "pr": "data"
             },
             "title": {
               "es": "Resultado: ",
-              "en": "Result: "
+              "en": "Result: ",
+              "pr": "Resultado: "
+            },
+            "description": {
+              "es": "Variable donde se almacenará el resultado",
+              "en": "Variable where the result will be stored",
+              "pr": "Variável onde o resultado será armazenado"
             },
             "help": {
               "es": "Nombre de variable sin llaves {}",
-              "en": "Variable name without {}"
+              "en": "Variable name without {}",
+              "pr": "Nome da variável sem {}"
             },
             "remove_vars" : true,
             "id": "result",
@@ -70,6 +95,11 @@
           },
           {
             "type": "select",
+            "placeholder": {
+              "es": "dd/mm/yyyy",
+              "en": "dd/mm/yyyy",
+              "pr": "dd/mm/yyyy"
+            },
             "options": [
               {
                 "title": "dd/mm/yyyy",
@@ -110,13 +140,24 @@
             ],
             "title": {
               "es": "Formato de entrada",
-              "en": "Input format"
+              "en": "Input format",
+              "pr": "Formato de entrada"
+            },
+            "description": {
+              "es": "Formato que tiene la fecha ingresada",
+              "en": "Format that has the entered date",
+              "pr": "Formato que tem a data inserida"
             },
             "id": "in",
             "css": "col-md-6"
           },
           {
             "type": "select",
+            "placeholder": {
+              "es": "dd/mm/yyyy",
+              "en": "dd/mm/yyyy",
+              "pr": "dd/mm/yyyy"
+            },
             "options": [
               {
                 "title": "dd/mm/yyyy",
@@ -157,7 +198,13 @@
             ],
             "title": {
               "es": "Formato de salida: ",
-              "en": "Output format: "
+              "en": "Output format: ",
+              "pr": "Formato de saída: "
+            },
+            "description": {
+              "es": "Formato que tendrá la fecha recibida",
+              "en": "Format that will have the date received",
+              "pr": "Formato que terá a data de recebimento"
             },
             "id": "out",
             "css": "col-md-6"
@@ -166,11 +213,23 @@
             "type": "input",
             "placeholder": {
               "es": "%d/%m/%y",
-              "en": "%d/%m/%y"
+              "en": "%d/%m/%y",
+              "pr": "%d/%m/%y"
             },
             "title": {
               "es": "Entrada personalizada: ",
-              "en": "Custom input: "
+              "en": "Custom input: ",
+              "pr": "Entrada personalizada: "
+            },
+            "description": {
+              "es": "Si el formato de la fecha es diferente a las opciones anteriores, debe ingresarse en este campo.",
+              "en": "If the date format is different from the options above, it must be entered in this field.",
+              "pr": "Se o formato da data for diferente das opções acima, deve ser informado neste campo."
+            },
+            "help": {
+              "es": "Opcional",
+              "en": "Optional",
+              "pr": "Opcional"
             },
             "id": "custom_in",
             "css": "col-md-6"
@@ -179,11 +238,23 @@
             "type": "input",
             "placeholder": {
               "es": "%d/%m/%y",
-              "en": "%d/%m/%y"
+              "en": "%d/%m/%y",
+              "pr": "%d/%m/%y"
             },
             "title": {
               "es": "Salida personalizada: ",
-              "en": "Custom output: "
+              "en": "Custom output: ",
+              "pr": "Saída personalizada: "
+            },
+            "description": {
+              "es": "Si el formato de la fecha que se desea recibir es diferente a las opciones anteriores, debe ingresarse en este campo.",
+              "en": "If the format of the date to be received is different from the previous options, it must be entered in this field.",
+              "pr": "Caso o formato da data a ser recebida seja diferente das opções anteriores, deve ser informado neste campo."
+            },
+            "help": {
+              "es": "Opcional",
+              "en": "Optional",
+              "pr": "Opcional"
             },
             "id": "custom_out",
             "css": "col-md-6"
@@ -206,13 +277,19 @@
     {
       "es": {
         "title": "Obtener dia de la semana",
-        "description": "Obtiene el dia de la semana",
+        "description": "Obtiene el dia de la semana de la fecha ingresada",
         "title_options": null,
         "options": null
       },
       "en": {
         "title": "Get weekday",
-        "description": "Get weekday",
+        "description": "Gets the day of the week of the entered date",
+        "title_options": null,
+        "options": null
+      },
+      "pr": {
+        "title": "Obter dia da semana",
+        "description": "Obtém o dia da semana da data inserida",
         "title_options": null,
         "options": null
       },
@@ -223,17 +300,29 @@
             "type": "input",
             "placeholder": {
               "es": "19/10/2000",
-              "en": "19/10/2000"
+              "en": "19/10/2000",
+              "pr": "19/10/2000"
             },
             "title": {
               "es": "Fecha: ",
-              "en": "Date: "
+              "en": "Date: ",
+              "pr": "Data: "
+            },
+            "description": {
+              "es": "Campo para ingresar la fecha.",
+              "en": "Field to enter the date.",
+              "pr": "Campo para ingresso na data."
             },
             "id": "date",
             "css": "col-md-6"
           },
           {
             "type": "select",
+            "placeholder": {
+              "es": "dd/mm/yyyy",
+              "en": "dd/mm/yyyy",
+              "pr": "dd/mm/yyyy"
+            },
             "options": [
               {
                 "title": "dd/mm/yyyy",
@@ -274,7 +363,13 @@
             ],
             "title": {
               "es": "Formato de entrada",
-              "en": "Input format"
+              "en": "Input format",
+              "pr": "Formato de entrada"
+            },
+            "description": {
+              "es": "Formato que tiene la fecha ingresada.",
+              "en": "Format that has the entered date.",
+              "pr": "Formato que tem a data inserida."
             },
             "id": "in",
             "css": "col-md-6"
@@ -282,16 +377,24 @@
           {
             "type": "input",
             "placeholder": {
-              "es": "{fecha}",
-              "en": "{date}"
+              "es": "fecha",
+              "en": "date",
+              "pr": "data"
             },
             "title": {
               "es": "Resultado: ",
-              "en": "Result: "
+              "en": "Result: ",
+              "pr": "Resultado: "
+            },
+            "description": {
+              "es": "Variable donde se guardará el resultado.",
+              "en": "Variable where the result will be saved.",
+              "pr": "Variável onde o resultado será salvo."
             },
             "help": {
               "es": "Nombre de variable sin llaves {}",
-              "en": "Variable name without {}"
+              "en": "Variable name without {}",
+              "pr": "Nome da variável sem {}"
             },
             "remove_vars" : true,
             "id": "result",
@@ -325,6 +428,12 @@
         "title_options": null,
         "options": null
       },
+      "pr": {
+        "title": "Adicionar e subtrair entre datas",
+        "description": "Adicionar e subtrair entre datas",
+        "title_options": null,
+        "options": null
+      },
       "form": {
         "css": "modal-lg",
         "inputs": [
@@ -332,17 +441,29 @@
             "type": "input",
             "placeholder": {
               "es": "19/10/2000",
-              "en": "19/10/2000"
+              "en": "19/10/2000",
+              "pr": "19/10/2000"
             },
             "title": {
               "es": "Fecha: ",
-              "en": "Date: "
+              "en": "Date: ",
+              "pr": "Data: "
+            },
+            "description": {
+              "es": "Fecha que se utilizará en el cálculo",
+              "en": "Date to be used in the calculation",
+              "pr": "Data a ser usada no cálculo"
             },
             "id": "date",
             "css": "col-md-6"
           },
           {
             "type": "select",
+            "placeholder": {
+              "es": "dd/mm/yyyy",
+              "en": "dd/mm/yyyy",
+              "pr": "dd/mm/yyyy"
+            },
             "options": [
               {
                 "title": "dd/mm/yyyy",
@@ -383,7 +504,13 @@
             ],
             "title": {
               "es": "Formato de entrada",
-              "en": "Input format"
+              "en": "Input format",
+              "pr": "Formato de entrada"
+            },
+            "description": {
+              "es": "Formato que tiene la fecha ingresada.",
+              "en": "Format that has the entered date.",
+              "pr": "Formato que tem a data inserida."
             },
             "id": "in",
             "css": "col-md-6"
@@ -391,16 +518,25 @@
           {
             "type": "input",
             "placeholder": {
-              "es": "{fecha}",
-              "en": "{date}"
+              "es": "fecha",
+              "en": "date",
+              "pr": "data"
+
             },
             "title": {
               "es": "Resultado: ",
-              "en": "Result: "
+              "en": "Result: ",
+              "pr": "Resultado: "
+            },
+            "description": {
+              "es": "Variable donde se almacenará el resultado",
+              "en": "Variable where the result will be stored",
+              "pr": "Variável onde o resultado será armazenado"
             },
             "help": {
               "es": "Nombre de variable sin llaves {}",
-              "en": "Variable name without {}"
+              "en": "Variable name without {}",
+              "pr": "Nome da variável sem {}"
             },
             "remove_vars" : true,
             "id": "result",
@@ -410,21 +546,34 @@
             "type": "input",
             "placeholder": {
               "es": "3",
-              "en": "3"
+              "en": "3",
+              "pr": "3"
             },
             "title": {
               "es": "Cantidad que será restada o sumada",
-              "en": "Amount to be subtracted or added"
+              "en": "Amount to be subtracted or added",
+              "pr": "Valor a ser subtraído ou adicionado"
+            },
+            "description": {
+              "es": "Número que será restado o sumado de la fecha ingresada.",
+              "en": "Number that will be subtracted or added from the entered date.",
+              "pr": "Número que será subtraído ou adicionado da data inserida."
             },
             "help": {
               "es": "Si quieres restar una fecha, utilice numeros negativos",
-              "en": "If you want to subtract a date, use negative numbers."
+              "en": "If you want to subtract a date, use negative numbers.",
+              "pr": "Se você quiser subtrair uma data, use números negativos."
             },
             "id": "amount",
             "css": "col-md-6"
           },
           {
             "type": "select",
+            "placeholder": {
+              "es": "days",
+              "en": "days",
+              "pr": "days"
+            },
             "options": [
               {
                 "title": "days",
@@ -445,7 +594,13 @@
             ],
             "title": {
               "es": "Tipo de fecha",
-              "en": "Type of date"
+              "en": "Type of date",
+              "pr": "Tipo de data"
+            },
+            "description": {
+              "es": "Tipo de fecha que se desea restar o sumar",
+              "en": "Type of date you want to subtract or add",
+              "pr": "Tipo de data que você deseja subtrair ou adicionar"
             },
             "id": "type_of_date",
             "css": "col-md-6"
@@ -478,6 +633,12 @@
           "title_options": null,
           "options": null
         },
+        "pr": {
+          "title": "Obter número da semana",
+          "description": "Obter número da semana",
+          "title_options": null,
+          "options": null
+        },
         "form": {
           "css": "modal-lg",
           "inputs": [
@@ -485,17 +646,29 @@
               "type": "input",
               "placeholder": {
                 "es": "19/10/2000",
-                "en": "19/10/2000"
+                "en": "19/10/2000",
+                "pr": "19/10/2000"
               },
               "title": {
                 "es": "Fecha: ",
-                "en": "Date: "
+                "en": "Date: ",
+                "pr": "Data: "
+              },
+              "description": {
+                "es": "Fecha de la cual se desea obtener el numero de la semana",
+                "en": "Date from which you want to get the number of the week",
+                "pr": "Data a partir da qual você deseja obter o número da semana"
               },
               "id": "date",
               "css": "col-md-6"
             },
             {
               "type": "select",
+              "placeholder": {
+                "es": "dd/mm/yyyy",
+                "en": "dd/mm/yyyy",
+                "pr": "dd/mm/yyyy"
+              },
               "options": [
                 {
                   "title": "dd/mm/yyyy",
@@ -536,7 +709,13 @@
               ],
               "title": {
                 "es": "Formato de entrada",
-                "en": "Input format"
+                "en": "Input format",
+                "pr": "Formato de entrada"
+              },
+              "description": {
+                "es": "Formato que tiene la fecha ingresada.",
+                "en": "Format that has the entered date.",
+                "pr": "Formato que tem a data inserida."
               },
               "id": "in",
               "css": "col-md-6"
@@ -544,16 +723,24 @@
             {
               "type": "input",
               "placeholder": {
-                "es": "{fecha}",
-                "en": "{date}"
+                "es": "fecha",
+                "en": "date",
+                "pr": "data"
               },
               "title": {
                 "es": "Resultado: ",
-                "en": "Result: "
+                "en": "Result: ",
+                "pr": "Resultado: "
+              },
+              "description": {
+                "es": "Variable donde se almacenará el resultado",
+                "en": "Variable where the result will be stored",
+                "pr": "Variável onde o resultado será armazenado"
               },
               "help": {
                 "es": "Nombre de variable sin llaves {}",
-                "en": "Variable name without {}"
+                "en": "Variable name without {}",
+                "pr": "Nome da variável sem {}"
               },
               "remove_vars" : true,
               "id": "result",
@@ -587,6 +774,12 @@
           "title_options": null,
           "options": null
         },
+        "pr": {
+          "title": "Comparação de datas",
+          "description": "Comparação de datas",
+          "title_options": null,
+          "options": null
+        },
         "form": {
           "css": "modal-lg",
           "inputs": [
@@ -594,21 +787,34 @@
               "type": "input",
               "placeholder": {
                 "es": "19/10/2000",
-                "en": "19/10/2000"
+                "en": "19/10/2000",
+                "pr": "19/10/2000"
               },
               "title": {
                 "es": "Fecha 1: ",
-                "en": "Date 1: "
+                "en": "Date 1: ",
+                "pr": "Data 1: "
+              },
+              "description": {
+                "es": "Fecha 1 que se desea comparar",
+                "en": "Date 1 to compare",
+                "pr": "Data 1 para comparar"
               },
               "help": {
                 "es": "Para usar la fecha actual, debes escribir 'hoy'",
-                "en": "For actual date, write 'today'"
+                "en": "For actual date, write 'today'",
+                "pr": "Para data atual, escreva 'today'"
               },
               "id": "date",
               "css": "col-md-4"
             },
             {
                 "type": "select",
+                "placeholder": {
+                  "es": "<",
+                  "en": "<",
+                  "pr": "<"
+                },
                 "options": [
                   {
                     "title": "<",
@@ -637,7 +843,13 @@
                 ],
                 "title": {
                   "es": "Operación",
-                  "en": "Operation"
+                  "en": "Operation",
+                  "pr": "Operação"
+                },
+                "description": {
+                  "es": "Operación que se realizará entre las fechas ingresadas.",
+                  "en": "Operation to be carried out between the dates entered.",
+                  "pr": "Operação a ser realizada entre as datas inseridas."
                 },
                 "id": "operation",
                 "css": "col-md-4"
@@ -646,15 +858,23 @@
                 "type": "input",
                 "placeholder": {
                   "es": "19/10/2000",
-                  "en": "19/10/2000"
+                  "en": "19/10/2000",
+                  "pr": "19/10/2000"
                 },
                 "title": {
                   "es": "Fecha 2: ",
-                  "en": "Date 2: "
+                  "en": "Date 2: ",
+                  "pr": "Data 2: "
+                },
+                "description": {
+                  "es": "Fecha 2 que se desea comparar",
+                  "en": "Date 2 to compare",
+                  "pr": "Data 2 para comparar"
                 },
                 "help": {
                   "es": "Para usar la fecha actual, debes escribir 'hoy'",
-                  "en": "For actual date, write 'today'"
+                  "en": "For actual date, write 'today'",
+                  "pr": "Para data atual, escreva 'today'"
                 },
                 "id": "date2",
                 "css": "col-md-4"
@@ -662,16 +882,24 @@
             {
                 "type": "input",
                 "placeholder": {
-                  "es": "{fecha}",
-                  "en": "{date}"
+                  "es": "resultado",
+                  "en": "result",
+                  "pr": "resultado"
                 },
                 "title": {
                   "es": "Resultado: ",
-                  "en": "Result: "
+                  "en": "Result: ",
+                  "pr": "Resultado: "
+                },
+                "description": {
+                  "es": "Variable donde se almacenará el resultado",
+                  "en": "Variable where the result will be stored",
+                  "pr": "Variável onde o resultado será armazenado"
                 },
                 "help": {
                   "es": "Nombre de variable sin llaves {}",
-                  "en": "Variable name without {}"
+                  "en": "Variable name without {}",
+                  "pr": "Nome da variável sem {}"
                 },
                 "remove_vars" : true,
                 "id": "result",
@@ -679,6 +907,11 @@
             },
             {
                 "type": "select",
+                "placeholder": {
+                  "es": "dd/mm/yyyy",
+                  "en": "dd/mm/yyyy",
+                  "pr": "dd/mm/yyyy"
+                },
                 "options": [
                   {
                     "title": "dd/mm/yyyy",
@@ -707,7 +940,13 @@
                 ],
                 "title": {
                   "es": "Formato de entrada",
-                  "en": "Input format"
+                  "en": "Input format",
+                  "pr": "Formato de entrada"
+                },
+                "description": {
+                  "es": "Formato que tiene la fecha ingresada",
+                  "en": "Format that has the entered date",
+                  "pr": "Formato que tem a data inserida"
                 },
                 "id": "in",
                 "css": "col-md-6"
@@ -716,11 +955,23 @@
               "type": "input",
               "placeholder": {
                 "es": "%d/%m/%y",
-                "en": "%d/%m/%y"
+                "en": "%d/%m/%y",
+                "pr": "%d/%m/%y"
               },
               "title": {
                 "es": "Entrada personalizada: ",
-                "en": "Custom input: "
+                "en": "Custom input: ",
+                "pr": "Entrada personalizada:"
+              },
+              "description": {
+                "es": "Completar en caso de que se desee utilizar otro formato de fecha.",
+                "en": "Complete in case you want to use another date format.",
+                "pr": "Preencha caso queira usar outro formato de data."
+              },
+              "help":{
+                "es": "Opcional, si se desea utilizar otro formato de fecha.",
+                "en": "Optional, if you want to use another date format.",
+                "pr": "Opcional, se você quiser usar outro formato de data."
               },
               "id": "custom_in",
               "css": "col-md-6"
