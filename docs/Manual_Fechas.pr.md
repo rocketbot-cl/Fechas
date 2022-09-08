@@ -27,16 +27,17 @@ Alterar o formato de uma data
 
 ### Obter dia da semana
   
-Obtém o dia da semana da data inserida
+Obtém o dia da semana da data inserida. O padrão 0 é segunda-feira e 6 é domingo.
 |Parâmetros|Descrição|exemplo|
 | --- | --- | --- |
 |Data |Campo para ingresso na data.|19/10/2000|
+|Segunda-feira a partir de 1|Ative-o se você quiser que a segunda-feira seja 1 em vez de 0 como padrão.|False|
 |Formato de entrada|Formato que tem a data inserida.|dd/mm/yyyy|
 |Resultado |Variável onde o resultado será salvo.|data|
 
-### Adicionar e subtrair entre datas
+### Cálculo em datas
   
-Adicionar e subtrair entre datas
+Adição e subtração de valores em uma data
 |Parâmetros|Descrição|exemplo|
 | --- | --- | --- |
 |Data |Data a ser usada no cálculo|19/10/2000|
@@ -47,7 +48,7 @@ Adicionar e subtrair entre datas
 
 ### Obter número da semana
   
-Obter número da semana
+Obtém o número da semana.
 |Parâmetros|Descrição|exemplo|
 | --- | --- | --- |
 |Data |Data a partir da qual você deseja obter o número da semana|19/10/2000|

@@ -27,16 +27,17 @@ Cambia el formato a una fecha
 
 ### Obtener dia de la semana
   
-Obtiene el dia de la semana de la fecha ingresada
+Obtiene el dia de la semana de la fecha ingresada. Por defecto 0 es lunes y 6 domingo.
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
 |Fecha |Campo para ingresar la fecha.|19/10/2000|
+|Empezar día lunes del 1|Actívalo si deseas que el día lunes sea 1 en lugar de 0 como es por defecto.|False|
 |Formato de entrada|Formato que tiene la fecha ingresada.|dd/mm/yyyy|
 |Resultado |Variable donde se guardará el resultado.|fecha|
 
-### Calculo entre fechas
+### Cálculo sobre fechas
   
-Suma y restas fechas
+Suma y resta valores en una fecha
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
 |Fecha |Fecha que se utilizará en el cálculo|19/10/2000|
@@ -47,7 +48,7 @@ Suma y restas fechas
 
 ### Obtener numero de la semana
   
-Obtiene el numero de la semana
+Obtiene el numero de la semana.
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
 |Fecha |Fecha de la cual se desea obtener el numero de la semana|19/10/2000|

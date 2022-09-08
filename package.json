@@ -2,7 +2,7 @@
   "author": "Danilo Toro - Rocketbot - <danilo.toro@rocketbot.cl>",
   "description": "Módulo para el manejo de fechas",
   "disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
-  "version": "2.4.1",
+  "version": "2.5.0",
   "license": "MIT",
   "homepage": "http://rocketbot.co",
   "linux": false,
@@ -102,6 +102,10 @@
             },
             "options": [
               {
+                "title": " ",
+                "value": "None"
+              },
+              {
                 "title": "dd/mm/yyyy",
                 "value": "%d/%m/%Y"
               },
@@ -159,6 +163,10 @@
               "pr": "dd/mm/yyyy"
             },
             "options": [
+              {
+                "title": " ",
+                "value": "None"
+              },
               {
                 "title": "dd/mm/yyyy",
                 "value": "%d/%m/%Y"
@@ -277,19 +285,19 @@
     {
       "es": {
         "title": "Obtener dia de la semana",
-        "description": "Obtiene el dia de la semana de la fecha ingresada",
+        "description": "Obtiene el dia de la semana de la fecha ingresada. Por defecto 0 es lunes y 6 domingo.",
         "title_options": null,
         "options": null
       },
       "en": {
         "title": "Get weekday",
-        "description": "Gets the day of the week of the entered date",
+        "description": "Gets the day of the week of the entered date. By default 0 is Monday and 6 is Sunday.",
         "title_options": null,
         "options": null
       },
       "pr": {
         "title": "Obter dia da semana",
-        "description": "Obtém o dia da semana da data inserida",
+        "description": "Obtém o dia da semana da data inserida. O padrão 0 é segunda-feira e 6 é domingo.",
         "title_options": null,
         "options": null
       },
@@ -313,7 +321,37 @@
               "en": "Field to enter the date.",
               "pr": "Campo para ingresso na data."
             },
+            "help": {
+              "es": "Para usar la fecha actual, debes escribir 'hoy'",
+              "en": "For actual date, write 'today'",
+              "pr": "Para data atual, escreva 'today'"
+            },
             "id": "date",
+            "css": "col-md-6"
+          },
+          {
+            "type": "checkbox",
+            "placeholder": {
+              "es": "False",
+              "en": "False",
+              "pr": "False"
+            },
+            "title": {
+              "es": "Empezar día lunes del 1",
+              "en": "Start day Monday from 1",
+              "pr": "Segunda-feira a partir de 1"
+            },
+            "help": {
+              "es": "Actívalo si deseas que el día lunes sea 1 en lugar de 0 como es por defecto.",
+              "en": "Activate it if you want Monday to be 1 instead of 0 as default.",
+              "pr": "Ative-o se você quiser que a segunda-feira seja 1 em vez de 0 como padrão."
+            },
+            "description": {
+              "es": "Actívalo si deseas que el día lunes sea 1 en lugar de 0 como es por defecto.",
+              "en": "Activate it if you want Monday to be 1 instead of 0 as default.",
+              "pr": "Ative-o se você quiser que a segunda-feira seja 1 em vez de 0 como padrão."
+            },
+            "id": "dayone",
             "css": "col-md-6"
           },
           {
@@ -324,6 +362,10 @@
               "pr": "dd/mm/yyyy"
             },
             "options": [
+              {
+                "title": " ",
+                "value": "None"
+              },
               {
                 "title": "dd/mm/yyyy",
                 "value": "%d/%m/%Y"
@@ -353,11 +395,11 @@
                 "value": "%d de %B del %Y"
               },
               {
-                "title": "dd Month  yyyy (English)",
+                "title": "dd Month yyyy (English)",
                 "value": "%d %B %Y"
               },
               {
-                "title": "dd mon  yyyy (Abbreviated)",
+                "title": "dd mon yyyy (Abbreviated)",
                 "value": "%d %b %Y"
               }
             ],
@@ -417,20 +459,20 @@
     },
     {
       "es": {
-        "title": "Calculo entre fechas",
-        "description": "Suma y restas fechas",
+        "title": "Cálculo sobre fechas",
+        "description": "Suma y resta valores en una fecha",
         "title_options": null,
         "options": null
       },
       "en": {
-        "title": "Add and subtract between dates",
-        "description": "Add and subtract between dates",
+        "title": "Calculation over dates",
+        "description": "Add and subtract values on a date",
         "title_options": null,
         "options": null
       },
       "pr": {
-        "title": "Adicionar e subtrair entre datas",
-        "description": "Adicionar e subtrair entre datas",
+        "title": "Cálculo em datas",
+        "description": "Adição e subtração de valores em uma data",
         "title_options": null,
         "options": null
       },
@@ -454,6 +496,11 @@
               "en": "Date to be used in the calculation",
               "pr": "Data a ser usada no cálculo"
             },
+            "help": {
+              "es": "Para usar la fecha actual, debes escribir 'hoy'",
+              "en": "For actual date, write 'today'",
+              "pr": "Para data atual, escreva 'today'"
+            },
             "id": "date",
             "css": "col-md-6"
           },
@@ -465,6 +512,10 @@
               "pr": "dd/mm/yyyy"
             },
             "options": [
+              {
+                "title": " ",
+                "value": "None"
+              },
               {
                 "title": "dd/mm/yyyy",
                 "value": "%d/%m/%Y"
@@ -521,7 +572,6 @@
               "es": "fecha",
               "en": "date",
               "pr": "data"
-
             },
             "title": {
               "es": "Resultado: ",
@@ -623,19 +673,19 @@
     {
         "es": {
           "title": "Obtener numero de la semana",
-          "description": "Obtiene el numero de la semana",
+          "description": "Obtiene el numero de la semana.",
           "title_options": null,
           "options": null
         },
         "en": {
           "title": "Get week number",
-          "description": "Get week number",
+          "description": "Gets the number of the week.",
           "title_options": null,
           "options": null
         },
         "pr": {
           "title": "Obter número da semana",
-          "description": "Obter número da semana",
+          "description": "Obtém o número da semana.",
           "title_options": null,
           "options": null
         },
@@ -659,6 +709,11 @@
                 "en": "Date from which you want to get the number of the week",
                 "pr": "Data a partir da qual você deseja obter o número da semana"
               },
+              "help": {
+                "es": "Para usar la fecha actual, debes escribir 'hoy'",
+                "en": "For actual date, write 'today'",
+                "pr": "Para data atual, escreva 'today'"
+              },
               "id": "date",
               "css": "col-md-6"
             },
@@ -670,6 +725,10 @@
                 "pr": "dd/mm/yyyy"
               },
               "options": [
+                {
+                  "title": " ",
+                  "value": "None"
+                },
                 {
                   "title": "dd/mm/yyyy",
                   "value": "%d/%m/%Y"
@@ -913,6 +972,10 @@
                   "pr": "dd/mm/yyyy"
                 },
                 "options": [
+                  {
+                    "title": " ",
+                    "value": "None"
+                  },
                   {
                     "title": "dd/mm/yyyy",
                     "value": "%d/%m/%Y"

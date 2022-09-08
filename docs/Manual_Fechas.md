@@ -27,16 +27,17 @@ Change the format of a date
 
 ### Get weekday
   
-Gets the day of the week of the entered date
+Gets the day of the week of the entered date. By default 0 is Monday and 6 is Sunday.
 |Parameters|Description|example|
 | --- | --- | --- |
 |Date |Field to enter the date.|19/10/2000|
+|Start day Monday from 1|Activate it if you want Monday to be 1 instead of 0 as default.|False|
 |Input format|Format that has the entered date.|dd/mm/yyyy|
 |Result |Variable where the result will be saved.|date|
 
-### Add and subtract between dates
+### Calculation over dates
   
-Add and subtract between dates
+Add and subtract values on a date
 |Parameters|Description|example|
 | --- | --- | --- |
 |Date |Date to be used in the calculation|19/10/2000|
@@ -47,7 +48,7 @@ Add and subtract between dates
 
 ### Get week number
   
-Get week number
+Gets the number of the week.
 |Parameters|Description|example|
 | --- | --- | --- |
 |Date |Date from which you want to get the number of the week|19/10/2000|
