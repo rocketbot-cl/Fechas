@@ -1,32 +1,32 @@
-# Date
+# Fechas
   
-Module for managing dates  
+Módulo para el manejo de fechas  
 
 *Read this in other languages: [English](README.md), [Portugues](README.pr.md), [Español](README.es.md).*
 
-## How to install this module
+## Como instalar este módulo
   
-__Download__ and __install__ the content in 'modules' folder in Rocketbot path  
+__Descarga__ e __instala__ el contenido en la carpeta 'modules' en la ruta de Rocketbot.  
 
 
 
 ## Overview
 
 
-1. Date format  
-Change the format of a date
+1. Formato Fechas  
+Cambia el formato a una fecha
 
-2. Get weekday  
-Gets the day of the week of the entered date
+2. Obtener dia de la semana  
+Obtiene el dia de la semana de la fecha ingresada
 
-3. Add and subtract between dates  
-Add and subtract between dates
+3. Calculo entre fechas  
+Suma y restas fechas
 
-4. Get week number  
-Get week number
+4. Obtener numero de la semana  
+Obtiene el numero de la semana
 
-5. Date comparation  
-Date comparation  
+5. Comparar Fechas  
+Comparar Fechas  
 
 
 
