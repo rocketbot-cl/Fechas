@@ -48,11 +48,17 @@ module = GetParams("module")
 
 def date_to_string(date, format_='%d/%m/%Y'):
     import locale
-    locale.setlocale(locale.LC_ALL, 'en_US')
+    try:
+        locale.setlocale(locale.LC_ALL, 'en_US')
+    except:
+        locale.setlocale(locale.LC_ALL, '')
     
     
     if "%d de %B del %Y" in [format_]:
-        locale.setlocale(locale.LC_ALL, 'es_ES')
+        try:
+            locale.setlocale(locale.LC_ALL, 'es_ES')
+        except:
+            locale.setlocale(locale.LC_ALL, 'spanish')
         return date.strftime(format_)
 
     return date.strftime(format_)
@@ -61,10 +67,16 @@ def date_to_string(date, format_='%d/%m/%Y'):
 def string_to_date(string, format_):
     from dateController import DateController
     import locale
-    locale.setlocale(locale.LC_ALL, 'en_US')
+    try:
+        locale.setlocale(locale.LC_ALL, 'en_US')
+    except:
+        locale.setlocale(locale.LC_ALL, '')
     
     if "%d de %B del %Y" in [format_]:
-        locale.setlocale(locale.LC_ALL, 'es_ES')
+        try:
+            locale.setlocale(locale.LC_ALL, 'es_ES')
+        except:
+            locale.setlocale(locale.LC_ALL, 'spanish')
         return datetime.datetime.strptime(string, format_)
 
     if string in ["today", "hoy", "now", "ahora"]:
@@ -85,7 +97,10 @@ def number_of_day(date, input_):
 def calculate_date(date, input_, amount, type_of_date):
     from dateutil import relativedelta
     import locale
-    locale.setlocale(locale.LC_ALL, 'en_US')
+    try:
+        locale.setlocale(locale.LC_ALL, 'en_US')
+    except:
+        locale.setlocale(locale.LC_ALL, '')
     
     datetime_format = datetime.datetime.strptime(date, input_)
 
@@ -100,7 +115,10 @@ def calculate_date(date, input_, amount, type_of_date):
 def get_week_number(date, input_):
     import locale
     from dateController import DateController
-    locale.setlocale(locale.LC_ALL, 'en_US')
+    try:
+        locale.setlocale(locale.LC_ALL, 'en_US')
+    except:
+        locale.setlocale(locale.LC_ALL, '')
         
     datetime_format = datetime.datetime.strptime(date, input_) 
     

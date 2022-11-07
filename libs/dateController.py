@@ -5,7 +5,10 @@ import locale
 class DateController:
 
     def __init__(self, myDate, inputFormat):
-        locale.setlocale(locale.LC_ALL, 'en_US')
+        try:
+            locale.setlocale(locale.LC_ALL, 'en_US')
+        except:
+            locale.setlocale(locale.LC_ALL, '')
         self.myDate = datetime.strptime(myDate, inputFormat)
 
     def changeFormat(self, outputFormat):
