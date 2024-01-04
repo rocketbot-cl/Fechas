@@ -29,6 +29,7 @@ import os
 import datetime
 import locale
 
+
 base_path = tmp_global_obj["basepath"]
 cur_path = base_path + 'modules' + os.sep + 'Fechas' + os.sep + 'libs' + os.sep
 if cur_path not in sys.path:
@@ -128,6 +129,25 @@ def get_week_number(date, input_):
     return myDateObject.getWeekNumber()
 
 
+def week_of_month(dt, input_):
+    from math import ceil
+    import locale
+
+    try:
+        locale.setlocale(locale.LC_ALL, 'en_US')
+    except:
+        locale.setlocale(locale.LC_ALL, '')
+
+    dttime = datetime.datetime.strptime(dt, input_) 
+
+    first_day = dttime.replace(day=1)
+
+    dom = dttime.day
+    adjusted_dom = dom + first_day.weekday()
+
+    return int(ceil(adjusted_dom/7.0))
+
+
 def resultComparation(date, date2, input_, custom_in, operation):
     from dateController import DateController
     
@@ -198,6 +218,15 @@ try:
         weekday_number = get_week_number(f_string, "%d/%m/%Y")
 
         SetVar(result, weekday_number)
+
+    if module == "weekOfMonth":
+        date = GetParams("date")
+        input_ = GetParams("in")
+        result = GetParams("result")
+
+        week_number = week_of_month(date, input_)
+
+        SetVar(result, week_number)
 
 
     if module == "calculateDate":

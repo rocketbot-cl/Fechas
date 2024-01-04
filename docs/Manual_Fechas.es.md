@@ -1,14 +1,18 @@
+
+
+
+
 # Fechas
   
-Módulo para el manejo de fechas 
+Módulo para manejar fechas  
 
-*Read this in other languages: [English](Manual_Fechas.md), [Portugues](Manual_Fechas.pr.md), [Español](Manual_Fechas.es.md).*
-
-![banner](imgs/Banner_fechas.png)
+  
+![banner](imgs/Banner_Fechas.png)
 ## Como instalar este módulo
   
-__Descarga__ e __instala__ el contenido en la carpeta 'modules' en la ruta de Rocketbot.  
-
+Para instalar el módulo en Rocketbot Studio, se puede hacer de dos formas:
+1. Manual: __Descargar__ el archivo .zip y descomprimirlo en la carpeta modules. El nombre de la carpeta debe ser el mismo al del módulo y dentro debe tener los siguientes archivos y carpetas: \__init__.py, package.json, docs, example y libs. Si tiene abierta la aplicación, refresca el navegador para poder utilizar el nuevo modulo.
+2. Automática: Al ingresar a Rocketbot Studio sobre el margen derecho encontrara la sección de **Addons**, seleccionar **Install Mods**, buscar el modulo deseado y presionar install.  
 
 
 ## Descripción de los comandos
@@ -49,6 +53,15 @@ Suma y resta valores en una fecha
 ### Obtener numero de la semana
   
 Obtiene el numero de la semana.
+|Parámetros|Descripción|ejemplo|
+| --- | --- | --- |
+|Fecha |Fecha de la cual se desea obtener el numero de la semana|19/10/2000|
+|Formato de entrada|Formato que tiene la fecha ingresada.|dd/mm/yyyy|
+|Resultado |Variable donde se almacenará el resultado|fecha|
+
+### Obtener numero de la semana del mes
+  
+Obtiene el numero de la semana del mes ingresado.
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
 |Fecha |Fecha de la cual se desea obtener el numero de la semana|19/10/2000|

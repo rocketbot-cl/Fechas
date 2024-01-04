@@ -1,13 +1,17 @@
+
+
+
+
 # Date
   
-Module for managing dates  
+Module to manage dates  
 
-*Read this in other languages: [English](README.md), [Portugues](README.pr.md), [Español](README.es.md).*
 
 ## How to install this module
   
-__Download__ and __install__ the content in 'modules' folder in Rocketbot path  
-
+To install the module in Rocketbot Studio, it can be done in two ways:
+1. Manual: __Download__ the .zip file and unzip it in the modules folder. The folder name must be the same as the module and inside it must have the following files and folders: \__init__.py, package.json, docs, example and libs. If you have the application open, refresh your browser to be able to use the new module.
+2. Automatic: When entering Rocketbot Studio on the right margin you will find the **Addons** section, select **Install Mods**, search for the desired module and press install.  
 
 
 ## Overview
@@ -17,15 +21,18 @@ __Download__ and __install__ the content in 'modules' folder in Rocketbot path
 Change the format of a date
 
 2. Get weekday  
-Gets the day of the week of the entered date
+Gets the day of the week of the entered date. By default 0 is Monday and 6 is Sunday.
 
-3. Add and subtract between dates  
-Add and subtract between dates
+3. Calculation over dates  
+Add and subtract values on a date
 
 4. Get week number  
-Get week number
+Gets the number of the week.
 
-5. Date comparation  
+5. Get week number of month  
+Gets the number of the week of the month entered.
+
+6. Date comparation  
 Date comparation  
 
 
