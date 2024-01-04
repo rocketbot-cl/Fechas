@@ -1,13 +1,12 @@
 
 
-
-
 # Date
   
 Module to manage dates  
 
   
 ![banner](imgs/Banner_Fechas.png)
+
 ## How to install this module
   
 To install the module in Rocketbot Studio, it can be done in two ways:
@@ -79,3 +78,4 @@ Date comparation
 |Result |Variable where the result will be stored|result|
 |Input format|Format that has the entered date|dd/mm/yyyy|
 |Custom input |Complete in case you want to use another date format.|%d/%m/%y|
+
