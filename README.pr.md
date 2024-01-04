@@ -1,13 +1,17 @@
+
+
+
+
 # Data
   
 Módulo para gerenciar datas  
 
-*Read this in other languages: [English](README.md), [Portugues](README.pr.md), [Español](README.es.md).*
 
 ## Como instalar este módulo
   
-__Baixe__ e __instale__ o conteúdo na pasta 'modules' no caminho do Rocketbot  
-
+Para instalar o módulo no Rocketbot Studio, pode ser feito de duas formas:
+1. Manual: __Baixe__ o arquivo .zip e descompacte-o na pasta módulos. O nome da pasta deve ser o mesmo do módulo e dentro dela devem ter os seguintes arquivos e pastas: \__init__.py, package.json, docs, example e libs. Se você tiver o aplicativo aberto, atualize seu navegador para poder usar o novo módulo.
+2. Automático: Ao entrar no Rocketbot Studio na margem direita você encontrará a seção **Addons**, selecione **Install Mods**, procure o módulo desejado e aperte instalar.  
 
 
 ## Overview
@@ -17,15 +21,18 @@ __Baixe__ e __instale__ o conteúdo na pasta 'modules' no caminho do Rocketbot
 Alterar o formato de uma data
 
 2. Obter dia da semana  
-Obtém o dia da semana da data inserida
+Obtém o dia da semana da data inserida. O padrão 0 é segunda-feira e 6 é domingo.
 
-3. Adicionar e subtrair entre datas  
-Adicionar e subtrair entre datas
+3. Cálculo em datas  
+Adição e subtração de valores em uma data
 
 4. Obter número da semana  
-Obter número da semana
+Obtém o número da semana.
 
-5. Comparação de datas  
+5. Obter o número da semana do mês  
+Obtém o número da semana do mês inserido.
+
+6. Comparação de datas  
 Comparação de datas  
 
 

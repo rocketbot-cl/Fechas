@@ -1,14 +1,18 @@
+
+
+
+
 # Data
   
 Módulo para gerenciar datas  
 
-*Read this in other languages: [English](Manual_Fechas.md), [Portugues](Manual_Fechas.pr.md), [Español](Manual_Fechas.es.md).*
   
-![banner](imgs/Banner_fechas.png)
+![banner](imgs/Banner_Fechas.png)
 ## Como instalar este módulo
   
-__Baixe__ e __instale__ o conteúdo na pasta 'modules' no caminho do Rocketbot  
-
+Para instalar o módulo no Rocketbot Studio, pode ser feito de duas formas:
+1. Manual: __Baixe__ o arquivo .zip e descompacte-o na pasta módulos. O nome da pasta deve ser o mesmo do módulo e dentro dela devem ter os seguintes arquivos e pastas: \__init__.py, package.json, docs, example e libs. Se você tiver o aplicativo aberto, atualize seu navegador para poder usar o novo módulo.
+2. Automático: Ao entrar no Rocketbot Studio na margem direita você encontrará a seção **Addons**, selecione **Install Mods**, procure o módulo desejado e aperte instalar.  
 
 
 ## Descrição do comando
@@ -49,6 +53,15 @@ Adição e subtração de valores em uma data
 ### Obter número da semana
   
 Obtém o número da semana.
+|Parâmetros|Descrição|exemplo|
+| --- | --- | --- |
+|Data |Data a partir da qual você deseja obter o número da semana|19/10/2000|
+|Formato de entrada|Formato que tem a data inserida.|dd/mm/yyyy|
+|Resultado |Variável onde o resultado será armazenado|data|
+
+### Obter o número da semana do mês
+  
+Obtém o número da semana do mês inserido.
 |Parâmetros|Descrição|exemplo|
 | --- | --- | --- |
 |Data |Data a partir da qual você deseja obter o número da semana|19/10/2000|
