@@ -1,11 +1,8 @@
-
-
-
-
 # Fechas
   
 Módulo para manejar fechas  
 
+*Read this in other languages: [English](Manual_Fechas.md), [Português](Manual_Fechas.pr.md), [Español](Manual_Fechas.es.md)*
   
 ![banner](imgs/Banner_Fechas.png)
 ## Como instalar este módulo
@@ -79,3 +76,14 @@ Comparar Fechas
 |Resultado |Variable donde se almacenará el resultado|resultado|
 |Formato de entrada|Formato que tiene la fecha ingresada|dd/mm/yyyy|
 |Entrada personalizada |Completar en caso de que se desee utilizar otro formato de fecha.|%d/%m/%y|
+
+### Días entre fechas
+  
+Este comando permite obtener la cantidad de días que hay entre dos fechas.
+|Parámetros|Descripción|ejemplo|
+| --- | --- | --- |
+|Fecha 1 |Fecha 1 que se desea comparar|30/10/2021|
+|Fecha 2 |Fecha 2 que se desea comparar|10/10/2022|
+|Formato de entrada|Formato que tiene la fecha ingresada|dd/mm/yyyy|
+|Entrada personalizada |Completar en caso de que se desee utilizar otro formato de fecha.|%d/%m/%y|
+|Resultado |Variable donde se almacenará el resultado|resultado|

@@ -1,11 +1,8 @@
-
-
-
-
 # Data
   
 Módulo para gerenciar datas  
 
+*Read this in other languages: [English](README.md), [Português](README.pr.md), [Español](README.es.md)*
 
 ## Como instalar este módulo
   
@@ -33,7 +30,10 @@ Obtém o número da semana.
 Obtém o número da semana do mês inserido.
 
 6. Comparação de datas  
-Comparação de datas  
+Comparação de datas
+
+7. Dias entre datas  
+Este comando permite obter a quantidade de dias entre duas datas.  
 
 
 

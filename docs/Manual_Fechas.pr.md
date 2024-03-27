@@ -1,11 +1,8 @@
-
-
-
-
 # Data
   
 Módulo para gerenciar datas  
 
+*Read this in other languages: [English](Manual_Fechas.md), [Português](Manual_Fechas.pr.md), [Español](Manual_Fechas.es.md)*
   
 ![banner](imgs/Banner_Fechas.png)
 ## Como instalar este módulo
@@ -79,3 +76,14 @@ Comparação de datas
 |Resultado |Variável onde o resultado será armazenado|resultado|
 |Formato de entrada|Formato que tem a data inserida|dd/mm/yyyy|
 |Entrada personalizada|Preencha caso queira usar outro formato de data.|%d/%m/%y|
+
+### Dias entre datas
+  
+Este comando permite obter a quantidade de dias entre duas datas.
+|Parâmetros|Descrição|exemplo|
+| --- | --- | --- |
+|Data 1 |Data 1 para comparar|30/10/2021|
+|Data 2 |Data 2 para comparar|10/10/2022|
+|Formato de entrada|Formato que tem a data inserida|dd/mm/yyyy|
+|Entrada personalizada|Preencha caso queira usar outro formato de data.|%d/%m/%y|
+|Resultado |Variável onde o resultado será armazenado|resultado|

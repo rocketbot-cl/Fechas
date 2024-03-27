@@ -1,12 +1,8 @@
-
-
-
-
 # Fechas
   
 Módulo para manejar fechas  
 
-
+*Read this in other languages: [English](README.md), [Português](README.pr.md), [Español](README.es.md)*
 
 ## Como instalar este módulo
   
@@ -34,7 +30,10 @@ Obtiene el numero de la semana.
 Obtiene el numero de la semana del mes ingresado.
 
 6. Comparar Fechas  
-Comparar Fechas  
+Comparar Fechas
+
+7. Días entre fechas  
+Este comando permite obtener la cantidad de días que hay entre dos fechas.  
 
 
 
