@@ -26,22 +26,28 @@ Para instalar librerias se debe ingresar por terminal a la carpeta "libs"
 
 import traceback
 import os
+import sys
 import datetime
-import locale
 
 
-base_path = tmp_global_obj["basepath"]
+
+
+base_path = tmp_global_obj["basepath"] # type: ignore
 cur_path = base_path + 'modules' + os.sep + 'Fechas' + os.sep + 'libs' + os.sep
 if cur_path not in sys.path:
     sys.path.append(cur_path)
 
-from dateController import DateController
+from dateController import DateController # type: ignore
 
 """
     Obtengo el modulo que fueron invocados
 """
 
 global myDateObject
+
+GetParams = GetParams # type: ignore
+SetVar = SetVar # type: ignore
+PrintException = PrintException # type: ignore
 
 module = GetParams("module")
 
@@ -66,7 +72,7 @@ def date_to_string(date, format_='%d/%m/%Y'):
 
 
 def string_to_date(string, format_):
-    from dateController import DateController
+    from dateController import DateController # type: ignore
     import locale
     try:
         locale.setlocale(locale.LC_ALL, 'en_US')
@@ -87,7 +93,7 @@ def string_to_date(string, format_):
 
 
 def number_of_day(date, input_):
-    from dateController import DateController
+    from dateController import DateController # type: ignore
 
     myDateObject = DateController(date, input_)
     weekday_date = myDateObject.getWeekDay()
@@ -96,7 +102,7 @@ def number_of_day(date, input_):
 
 
 def calculate_date(date, input_, amount, type_of_date):
-    from dateutil import relativedelta
+    from dateutil import relativedelta # type: ignore
     import locale
     try:
         locale.setlocale(locale.LC_ALL, 'en_US')
@@ -115,7 +121,7 @@ def calculate_date(date, input_, amount, type_of_date):
 
 def get_week_number(date, input_):
     import locale
-    from dateController import DateController
+    from dateController import DateController # type: ignore
     try:
         locale.setlocale(locale.LC_ALL, 'en_US')
     except:
@@ -149,7 +155,7 @@ def week_of_month(dt, input_):
 
 
 def resultComparation(date, date2, input_, custom_in, operation):
-    from dateController import DateController
+    from dateController import DateController # type: ignore
     
     if not input_ or input_ == "None":
         input_ = custom_in
@@ -262,6 +268,38 @@ try:
         resultComparation_ = resultComparation(date, date2, input_, custom_in, operation)
         
         SetVar(result, resultComparation_)
+
+    if module == "daysBetweenDates":
+        date = GetParams("date")
+        date2 = GetParams("date2")
+        input_ = GetParams("in")
+        custom_in = GetParams("custom_in")
+        result = GetParams("result")
+
+        if not input_ or input_ == "None":
+            input_ = custom_in
+
+        if date in ["today", "hoy", "now", "ahora"]:
+            date = datetime.datetime.now().__str__()[:10]
+            print("date", date)
+            input_today = "%Y-%m-%d"
+            date = string_to_date(date, input_today)
+        else:
+            date = string_to_date(date, input_)
+
+        if date2 in ["today", "hoy", "now", "ahora"]:
+            date2 = datetime.datetime.now().__str__()[:10]
+            input_today = "%Y-%m-%d"
+            date2 = string_to_date(date2, input_today)
+        else:
+            date2 = string_to_date(date2, input_)
+
+        days = (date - date2).days
+        # if negative, change the sign
+        if days < 0:
+            days = days * -1
+        print("days", days)
+        SetVar(result, days)
 
 
 except Exception as e:

@@ -1,12 +1,10 @@
-
-
 # Date
   
 Module to manage dates  
 
+*Read this in other languages: [English](Manual_Fechas.md), [Português](Manual_Fechas.pr.md), [Español](Manual_Fechas.es.md)*
   
 ![banner](imgs/Banner_Fechas.png)
-
 ## How to install this module
   
 To install the module in Rocketbot Studio, it can be done in two ways:
@@ -79,3 +77,13 @@ Date comparation
 |Input format|Format that has the entered date|dd/mm/yyyy|
 |Custom input |Complete in case you want to use another date format.|%d/%m/%y|
 
+### Days between dates
+  
+This command allows you to obtain the number of days between two dates.
+|Parameters|Description|example|
+| --- | --- | --- |
+|Date 1 |Date 1 to compare|30/10/2021|
+|Date 2 |Date 2 to compare|10/10/2022|
+|Input format|Format that has the entered date|dd/mm/yyyy|
+|Custom input |Complete in case you want to use another date format.|%d/%m/%y|
+|Result |Variable where the result will be stored|result|

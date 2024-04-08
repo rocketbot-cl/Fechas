@@ -1,11 +1,8 @@
-
-
-
-
 # Date
   
 Module to manage dates  
 
+*Read this in other languages: [English](README.md), [Português](README.pr.md), [Español](README.es.md)*
 
 ## How to install this module
   
@@ -33,7 +30,10 @@ Gets the number of the week.
 Gets the number of the week of the month entered.
 
 6. Date comparation  
-Date comparation  
+Date comparation
+
+7. Days between dates  
+This command allows you to obtain the number of days between two dates.  
 
 
 
