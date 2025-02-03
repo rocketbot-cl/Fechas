@@ -28,8 +28,7 @@ import traceback
 import os
 import sys
 import datetime
-
-
+import locale
 
 
 base_path = tmp_global_obj["basepath"] # type: ignore
@@ -67,6 +66,12 @@ def date_to_string(date, format_='%d/%m/%Y'):
         except:
             locale.setlocale(locale.LC_ALL, 'spanish')
         return date.strftime(format_)
+    elif "%d %B de %Y %H:%M:%S" in [format_]:
+        try:
+            locale.setlocale(locale.LC_ALL, 'es_ES')
+        except:
+            locale.setlocale(locale.LC_ALL, 'spanish')
+        return date.strftime(format_)
 
     return date.strftime(format_)
 
@@ -85,7 +90,13 @@ def string_to_date(string, format_):
         except:
             locale.setlocale(locale.LC_ALL, 'spanish')
         return datetime.datetime.strptime(string, format_)
-
+    elif "%d %B de %Y %H:%M:%S" in [format_]:
+        try:
+            locale.setlocale(locale.LC_ALL, 'es_ES')
+        except:
+            locale.setlocale(locale.LC_ALL, 'spanish')
+        return datetime.datetime.strptime(string, format_)
+    
     if string in ["today", "hoy", "now", "ahora"]:
         return datetime.datetime.now()
 
