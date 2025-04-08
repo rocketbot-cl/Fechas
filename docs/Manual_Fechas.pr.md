@@ -1,10 +1,14 @@
+
+
+
+
 # Data
   
 Módulo para gerenciar datas  
 
 *Read this in other languages: [English](Manual_Fechas.md), [Português](Manual_Fechas.pr.md), [Español](Manual_Fechas.es.md)*
   
-![banner](imgs/Banner_Fechas.png)
+![banner](imgs/Banner_Fechas.png o jpg)
 ## Como instalar este módulo
   
 Para instalar o módulo no Rocketbot Studio, pode ser feito de duas formas:
@@ -87,3 +91,11 @@ Este comando permite obter a quantidade de dias entre duas datas.
 |Formato de entrada|Formato que tem a data inserida|dd/mm/yyyy|
 |Entrada personalizada|Preencha caso queira usar outro formato de data.|%d/%m/%y|
 |Resultado |Variável onde o resultado será armazenado|resultado|
+
+### Obter idade a partir da data de nascimento
+  
+Obtém a idade a partir da data de nascimento de uma pessoa
+|Parâmetros|Descrição|exemplo|
+| --- | --- | --- |
+|Data |Data a partir da qual você deseja obter a idade da pessoa|2000-04-12|
+|Resultado |Variável onde o resultado será armazenado|data|

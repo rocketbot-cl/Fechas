@@ -1,3 +1,7 @@
+
+
+
+
 # Date
   
 Module to manage dates  
@@ -33,7 +37,10 @@ Gets the number of the week of the month entered.
 Date comparation
 
 7. Days between dates  
-This command allows you to obtain the number of days between two dates.  
+This command allows you to obtain the number of days between two dates.
+
+8. Get age from date of birth  
+Gets the age from a person's date of birth  
 
 
 

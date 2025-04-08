@@ -1,10 +1,14 @@
+
+
+
+
 # Date
   
 Module to manage dates  
 
 *Read this in other languages: [English](Manual_Fechas.md), [Português](Manual_Fechas.pr.md), [Español](Manual_Fechas.es.md)*
   
-![banner](imgs/Banner_Fechas.png)
+![banner](imgs/Banner_Fechas.png o jpg)
 ## How to install this module
   
 To install the module in Rocketbot Studio, it can be done in two ways:
@@ -87,3 +91,11 @@ This command allows you to obtain the number of days between two dates.
 |Input format|Format that has the entered date|dd/mm/yyyy|
 |Custom input |Complete in case you want to use another date format.|%d/%m/%y|
 |Result |Variable where the result will be stored|result|
+
+### Get age from date of birth
+  
+Gets the age from a person's date of birth
+|Parameters|Description|example|
+| --- | --- | --- |
+|Date |Date from which the person's age is to be obtained|2000-04-12|
+|Result |Variable where the result will be stored|date|

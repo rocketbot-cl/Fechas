@@ -1,10 +1,14 @@
+
+
+
+
 # Fechas
   
 Módulo para manejar fechas  
 
 *Read this in other languages: [English](Manual_Fechas.md), [Português](Manual_Fechas.pr.md), [Español](Manual_Fechas.es.md)*
   
-![banner](imgs/Banner_Fechas.png)
+![banner](imgs\Banner_fechas.png)
 ## Como instalar este módulo
   
 Para instalar el módulo en Rocketbot Studio, se puede hacer de dos formas:
@@ -87,3 +91,11 @@ Este comando permite obtener la cantidad de días que hay entre dos fechas.
 |Formato de entrada|Formato que tiene la fecha ingresada|dd/mm/yyyy|
 |Entrada personalizada |Completar en caso de que se desee utilizar otro formato de fecha.|%d/%m/%y|
 |Resultado |Variable donde se almacenará el resultado|resultado|
+
+### Obtener edad desde fecha de nacimiento
+  
+Obtiene la edad desde la fecha de nacimiento de una persona.
+|Parámetros|Descripción|ejemplo|
+| --- | --- | --- |
+|Fecha |Fecha de la cual se desea obtener la edad de la persona|2000-04-12|
+|Resultado |Variable donde se almacenará el resultado|fecha|
