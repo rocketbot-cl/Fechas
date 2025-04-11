@@ -1422,9 +1422,9 @@
             {
               "type": "input",
               "placeholder": {
-                "es": "2000-04-12",
-                "en": "2000-04-12",
-                "pr": "2000-04-12"
+                "es": "AAAA-MM-DD",
+                "en": "YYYY-MM-DD",
+                "pr": "AAAA-MM-DD"
               },
               "title": {
                 "es": "Fecha: ",
@@ -1432,9 +1432,9 @@
                 "pr": "Data: "
               },
               "description": {
-                "es": "Fecha de la cual se desea obtener la edad de la persona",
-                "en": "Date from which the person's age is to be obtained",
-                "pr": "Data a partir da qual você deseja obter a idade da pessoa"
+                "es": "Fecha de la cual se desea obtener la edad de la persona con el formato AAAA-MM-DD",
+                "en": "Date from which you want to obtain the person's age in the YYYY-MM-DD format",
+                "pr": "Data a partir da qual você deseja obter a idade da pessoa no formato AAAA-MM-DD"
               },
               "help": {
                 "es": "Para obtener la edad debes ingresar la fecha de nacimiento",
@@ -1447,9 +1447,9 @@
             {
               "type": "input",
               "placeholder": {
-                "es": "fecha",
-                "en": "date",
-                "pr": "data"
+                "es": "resultado",
+                "en": "result",
+                "pr": "resultado"
               },
               "title": {
                 "es": "Resultado: ",

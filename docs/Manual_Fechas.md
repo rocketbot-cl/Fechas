@@ -8,7 +8,7 @@ Module to manage dates
 
 *Read this in other languages: [English](Manual_Fechas.md), [Português](Manual_Fechas.pr.md), [Español](Manual_Fechas.es.md)*
   
-![banner](imgs/Banner_Fechas.png o jpg)
+![banner](imgs\Banner_fechas.png)
 ## How to install this module
   
 To install the module in Rocketbot Studio, it can be done in two ways:
@@ -97,5 +97,5 @@ This command allows you to obtain the number of days between two dates.
 Gets the age from a person's date of birth
 |Parameters|Description|example|
 | --- | --- | --- |
-|Date |Date from which the person's age is to be obtained|2000-04-12|
-|Result |Variable where the result will be stored|date|
+|Date |Date from which you want to obtain the person's age in the YYYY-MM-DD format|YYYY-MM-DD|
+|Result |Variable where the result will be stored|result|

@@ -97,5 +97,5 @@ Este comando permite obtener la cantidad de días que hay entre dos fechas.
 Obtiene la edad desde la fecha de nacimiento de una persona.
 |Parámetros|Descripción|ejemplo|
 | --- | --- | --- |
-|Fecha |Fecha de la cual se desea obtener la edad de la persona|2000-04-12|
-|Resultado |Variable donde se almacenará el resultado|fecha|
+|Fecha |Fecha de la cual se desea obtener la edad de la persona con el formato AAAA-MM-DD|AAAA-MM-DD|
+|Resultado |Variable donde se almacenará el resultado|resultado|
