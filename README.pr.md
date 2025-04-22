@@ -1,3 +1,7 @@
+
+
+
+
 # Data
   
 Módulo para gerenciar datas  
@@ -33,7 +37,10 @@ Obtém o número da semana do mês inserido.
 Comparação de datas
 
 7. Dias entre datas  
-Este comando permite obter a quantidade de dias entre duas datas.  
+Este comando permite obter a quantidade de dias entre duas datas.
+
+8. Obter idade a partir da data de nascimento  
+Obtém a idade a partir da data de nascimento de uma pessoa  
 
 
 

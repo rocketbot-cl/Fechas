@@ -183,8 +183,30 @@ def resultComparation(date, date2, input_, custom_in, operation):
 
     return myDateObject.compareDate(date2, input_, operation)
 
+def calcular_edad(fecha_nacimiento):
+    
+    from datetime import datetime
+    from dateutil.relativedelta import relativedelta
+    nacimiento = datetime.strptime(fecha_nacimiento, "%Y-%m-%d")
+    hoy = datetime.today()
+    diferencia = relativedelta(hoy, nacimiento)
+    return diferencia.years
+
 
 try:
+    if module == "get_birth":
+        fecha_nacimiento = GetParams("date")
+        result = GetParams("result")
+
+        if not fecha_nacimiento:
+            SetVar(result,"Error: The date format is not correct, it should be YYYY-MM-DD")
+        else:
+            try:
+                edad = calcular_edad(fecha_nacimiento)
+                SetVar(result, edad)
+            except Exception as e:
+                raise e
+
 
     if module == "dateFormat":
         date = GetParams("date")

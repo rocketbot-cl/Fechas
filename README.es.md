@@ -1,3 +1,7 @@
+
+
+
+
 # Fechas
   
 Módulo para manejar fechas  
@@ -33,7 +37,10 @@ Obtiene el numero de la semana del mes ingresado.
 Comparar Fechas
 
 7. Días entre fechas  
-Este comando permite obtener la cantidad de días que hay entre dos fechas.  
+Este comando permite obtener la cantidad de días que hay entre dos fechas.
+
+8. Obtener edad desde fecha de nacimiento  
+Obtiene la edad desde la fecha de nacimiento de una persona.  
 
 
 
